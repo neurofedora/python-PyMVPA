@@ -1,0 +1,21 @@
+diff --git a/setup.py b/setup.py
+index 9c1aa68..4180fe6 100755
+--- a/setup.py
++++ b/setup.py
+@@ -20,7 +20,7 @@ if sys.version_info[:2] < (2, 6):
+     raise RuntimeError("PyMVPA requires Python 2.6 or higher")
+ 
+ # some config settings
+-bind_libsvm = 'local' # choices: 'local', 'system', None
++bind_libsvm = 'system' # choices: 'local', 'system', None
+ 
+ libsvmc_extra_sources = []
+ libsvmc_include_dirs = []
+@@ -71,6 +71,7 @@ elif bind_libsvm == 'system':
+             '/usr/include/libsvm-3.0/libsvm',
+             '/usr/include/libsvm-2.0/libsvm',
+             '/usr/include/libsvm',
++            '/usr/include',
+             '/usr/local/include/libsvm',
+             '/usr/local/include/libsvm-2.0/libsvm',
+             '/usr/local/include']
