@@ -3,7 +3,7 @@
 
 Name:           python-%{origname}
 Version:        2.4.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Multivariate pattern analysis
 
 License:        MIT
@@ -37,6 +37,7 @@ BuildRequires:  python-nose
 BuildRequires:  scipy python2-nibabel
 BuildRequires:  python-lxml h5py python-statsmodels python-shogun
 BuildRequires:  python2-nipy lapack-devel
+BuildRequires:  python2-pywt
 Requires:       numpy
 # Strongly
 Recommends:     scipy python2-nibabel
@@ -50,6 +51,7 @@ Recommends:     libsvm-python
 Recommends:     python-lxml
 Recommends:     python-shogun
 Recommends:     lapack-devel
+Recommends:     python2-pywt
 Suggests:       ipython
 
 %description -n python2-%{origname}
@@ -76,6 +78,7 @@ BuildRequires:  python3-nose
 BuildRequires:  python3-scipy python3-nibabel
 BuildRequires:  python3-lxml python3-h5py python3-statsmodels python3-shogun
 BuildRequires:  python3-nipy
+BuildRequires:  python3-pywt
 Requires:       python3-numpy
 # Strongly
 Recommends:     python3-scipy python3-nibabel
@@ -90,6 +93,7 @@ Recommends:     python3-statsmodels
 Recommends:     python3-lxml
 Recommends:     python3-shogun
 Recommends:     lapack-devel
+Recommends:     python3-pywt
 Suggests:       python3-ipython
 
 %description -n python3-%{origname}
@@ -188,5 +192,8 @@ xvfb-run nosetests-%{python3_version} -v || :
 %{python3_sitearch}/py%{modname}*-egginfo
 
 %changelog
+* Fri Nov 06 2015 Igor Gnatenko <i.gnatenko.brain@gmail.com> - 2.4.0-2
+- Add pywt to Recommends/BuildRequires
+
 * Sun Nov 01 2015 Igor Gnatenko <i.gnatenko.brain@gmail.com> - 2.4.0-1
 - Initial package
