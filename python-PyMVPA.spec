@@ -36,7 +36,7 @@ BuildRequires:  numpy
 # Test deps
 BuildRequires:  python2-nose
 BuildRequires:  scipy python2-nibabel
-BuildRequires:  python-lxml h5py python2-statsmodels python-shogun
+BuildRequires:  python-lxml h5py python-statsmodels python-shogun
 BuildRequires:  python2-nipy lapack-devel
 BuildRequires:  python2-pywt
 Requires:       numpy
